@@ -1,0 +1,16 @@
+Build.PL
+Changes
+MANIFEST
+META.yml
+README
+TODO
+eg/callback
+eg/cb2
+eg/cmd
+eg/simple
+eg/wave
+lib/Tie/Cycle/Sinewave.pm
+t/00-load.t
+t/01-basic.t
+t/pod-coverage.t
+t/pod.t

@@ -1,0 +1,13 @@
+---
+name: Tie-Cycle-Sinewave
+version: 0.01
+author: David Landgren <david@landgren.net>
+abstract: Cycle through a series of values on a sinewave
+license: perl
+requires:
+  Test::More: 0
+provides:
+  Tie::Cycle::Sinewave:
+    file: lib/Tie/Cycle/Sinewave.pm
+    version: 0.01
+generated_by: Module::Build version 0.25
