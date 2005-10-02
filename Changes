@@ -1,5 +1,12 @@
 Revision history for Perl extension Tie::Cycle::Sinewave
 
-0.01 Tue Apr 5 15:00:09 2005 UTC
+0.02 2005-10-02 15:16:29 UTC
+    - Couldn't get Build.PL to play nicely under smoke tests (the dreaded
+      "Too early to specify a build action 'Build'." error). So I threw
+      it away and use ExtUtils::MakeMaker instead.
+    - t/pod.t and t/pod_coverage.t were subsumed by t/00-basic.t
+    - detabbed source files
+
+0.01 2005-04-05 15:00:09 UTC
     - initial release
 

@@ -1,13 +1,11 @@
----
-name: Tie-Cycle-Sinewave
-version: 0.01
-author: David Landgren <david@landgren.net>
-abstract: Cycle through a series of values on a sinewave
-license: perl
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Tie-Cycle-Sinewave
+version:      0.02
+version_from: Sinewave.pm
+installdirs:  site
 requires:
-  Test::More: 0
-provides:
-  Tie::Cycle::Sinewave:
-    file: lib/Tie/Cycle/Sinewave.pm
-    version: 0.01
-generated_by: Module::Build version 0.25
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30

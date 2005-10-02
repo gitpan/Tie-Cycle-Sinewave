@@ -14,13 +14,13 @@ my $max = shift || 100;
 my $period = shift || 20;
 
 tie my $c, 'Tie::Cycle::Sinewave', {
-	start_max => 1,
-	min       => $min,
-	max       => $max,
-	period    => $period,
+    start_max => 1,
+    min       => $min,
+    max       => $max,
+    period    => $period,
 };
 
 while( 1 ) {
-	printf "%10.2f\n";
-	select undef, undef, undef, 0.2;
+    printf "%10.2f\n";
+    select undef, undef, undef, 0.2;
 }

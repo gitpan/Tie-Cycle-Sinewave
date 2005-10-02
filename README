@@ -1,4 +1,4 @@
-This file is the README for Tie::Cycle::Sinewave version 0.01
+This file is the README for Tie::Cycle::Sinewave version 0.02
 
 INSTALLATION
 
@@ -21,7 +21,7 @@ and period).
 
 A number of sample programs are available in the eg/ directory. If
 you don't have easy access to this they are available on the web,
-at http://search.cpan.org/authors/id/D/DL/DLAND
+at http://search.cpan.org/~DLAND/
 
 STATUS
 

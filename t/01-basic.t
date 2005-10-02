@@ -68,11 +68,11 @@ use Test::More tests => 31;
         startmax => 1,
     };
 
-	$dont_care = $cb for 1..11;
+    $dont_care = $cb for 1..11;
     cmp_ok( $at_max, '==', 0, 'not yet past max' );
     cmp_ok( $at_min, '==', 1, 'but past min' );
 
-	$dont_care = $cb for 1..11;
+    $dont_care = $cb for 1..11;
     cmp_ok( $at_max, '==', 1, 'now past max' );
 }
 
@@ -88,17 +88,17 @@ use Test::More tests => 31;
         startmin => 1,
     };
 
-	$dont_care = $cb for 1..11;
+    $dont_care = $cb for 1..11;
     cmp_ok( $at_min, '==', 0, 'not yet past min' );
     cmp_ok( $at_max, '==', 1, 'but past max' );
 
-	$dont_care = $cb for 1..11;
+    $dont_care = $cb for 1..11;
     cmp_ok( $at_min, '==', 1, 'now past min' );
 }
 
 {
     my $dont_care;
-	my $period = 17;
+    my $period = 17;
 
     tie my $d, 'Tie::Cycle::Sinewave', {
         min => 18,
@@ -108,23 +108,23 @@ use Test::More tests => 31;
         at_max => 'nop',
     };
 
-	my $first  = $d;
-	my $angle  = (tied $d)->angle;
+    my $first  = $d;
+    my $angle  = (tied $d)->angle;
     $dont_care = $d for 1 .. ($period - 1);
 
     cmp_ok( abs($first - $d), '<', 1e-3, 'back to where we started' );
 
-	my $now  = (tied $d)->angle;
+    my $now  = (tied $d)->angle;
     cmp_ok( abs($angle - $now), '<', 1e-3, 'angle check' );
 
-	my $next = $d;
+    my $next = $d;
 
-	ok( not( exists( (tied $d)->{at_min} )), 'at_min not defined for garbage' );
-	ok( not( exists( (tied $d)->{at_max} )), 'at_max not defined for garbage' );
+    ok( not( exists( (tied $d)->{at_min} )), 'at_min not defined for garbage' );
+    ok( not( exists( (tied $d)->{at_max} )), 'at_max not defined for garbage' );
 
     $dont_care = $d for 1 .. 10;
-	$d = $angle;
-	
+    $d = $angle;
+
     cmp_ok( abs($next - $d), '<', 1e-3, 'STORE check' );
 }
 

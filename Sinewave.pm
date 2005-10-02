@@ -8,14 +8,14 @@ Tie::Cycle::Sinewave - Cycle through a series of values on a sinewave
 
 =head1 VERSION
 
-This document describes version 0.01 of Tie::Cycle::Sinewave,
-released 2005-04-06.
+This document describes version 0.02 of Tie::Cycle::Sinewave,
+released 2005-10-02.
 
 =cut
 
 use vars '$VERSION';
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -25,12 +25,12 @@ of steps and you're set.
 
     use Tie::Cycle::Sinewave;
 
-	tie my $cycle, 'Tie::Cycle::Sinewave', {
-		min    => 10,
-		max    => 50,
-		period => 12,
-	};
-	print "$foo\n" for 1..10;
+    tie my $cycle, 'Tie::Cycle::Sinewave', {
+        min    => 10,
+        max    => 50,
+        period => 12,
+    };
+    print "$foo\n" for 1..10;
 
 =head1 PARAMETERS
 
@@ -190,10 +190,10 @@ The previous value is returned.
 sub min {
     my $self = shift;
     my $old = $self->{min};
-	if( @_ ) {
-    	$self->{min} = shift;
-		$self->_validate_min_max();
-	}
+    if( @_ ) {
+        $self->{min} = shift;
+        $self->_validate_min_max();
+    }
     $old;
 }
 
@@ -215,10 +215,10 @@ around.
 sub max {
     my $self = shift;
     my $old = $self->{max};
-	if( @_ ) {
-    	$self->{max} = shift;
-		$self->_validate_min_max();
-	}
+    if( @_ ) {
+        $self->{max} = shift;
+        $self->_validate_min_max();
+    }
     $old;
 }
 
@@ -233,10 +233,10 @@ The previous value is returned.
 sub period {
     my $self = shift;
     my $old = $self->{period};
-	if( @_ ) {
-    	$self->{period} = shift;
-    	$self->{period} = 1 if $self->{period} == 0;
-	}
+    if( @_ ) {
+        $self->{period} = shift;
+        $self->{period} = 1 if $self->{period} == 0;
+    }
     $old;
 }
 
@@ -254,11 +254,11 @@ in the range C< 0 <= angle <= 2*PI>.
 =cut
 
 sub angle {
-	my $self = shift;
-	if( $self->{prev} > PI_2 ) {
-		$self->{prev} -= PI_2;
-		$self->{angle} -= PI_2;
-	}
+    my $self = shift;
+    if( $self->{prev} > PI_2 ) {
+        $self->{prev} -= PI_2;
+        $self->{angle} -= PI_2;
+    }
     $self->{angle}
 }
 
