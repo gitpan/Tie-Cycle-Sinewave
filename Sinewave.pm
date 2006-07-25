@@ -8,14 +8,14 @@ Tie::Cycle::Sinewave - Cycle through a series of values on a sinewave
 
 =head1 VERSION
 
-This document describes version 0.02 of Tie::Cycle::Sinewave,
-released 2005-10-02.
+This document describes version 0.03 of Tie::Cycle::Sinewave,
+released 2006-07-25.
 
 =cut
 
 use vars '$VERSION';
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -23,6 +23,7 @@ This module allows you to make a scalar iterate through the values
 on a sinewave. You set the maximum and minimum values and the number
 of steps and you're set.
 
+    use strict;
     use Tie::Cycle::Sinewave;
 
     tie my $cycle, 'Tie::Cycle::Sinewave', {
@@ -30,7 +31,7 @@ of steps and you're set.
         max    => 50,
         period => 12,
     };
-    print "$foo\n" for 1..10;
+    printf("%0.2f\n", $cycle) for 1..10;
 
 =head1 PARAMETERS
 
@@ -87,7 +88,7 @@ C<atmin> exists as an alias).
 
 =cut
 
-use constant PI   => 3.14159265359;
+use constant PI   => 3.1415926535_8979323846_2643383280;
 use constant PI_2 => 2 * PI;
 
 sub TIESCALAR {
@@ -264,11 +265,12 @@ sub angle {
 
 =head1 AUTHOR
 
-David Landgren, C<david@landgren.net>
+David Landgren.
 
 =head1 SEE ALSO
 
  L<Tie::Cycle>
+ L<HTML::Rainbow>
 
 =head1 BUGS
 
@@ -278,7 +280,7 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Cycle-Sinewave>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005 David Landgren, All Rights Reserved.
+Copyright 2005-2006 David Landgren, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -115,7 +115,10 @@ use Test::More tests => 31;
     cmp_ok( abs($first - $d), '<', 1e-3, 'back to where we started' );
 
     my $now  = (tied $d)->angle;
-    cmp_ok( abs($angle - $now), '<', 1e-3, 'angle check' );
+	my $error = abs($angle - $now);
+	$error -= Tie::Cycle::Sinewave::PI_2 if $error > Tie::Cycle::Sinewave::PI;
+    cmp_ok( $error, '<', 1e-3, 'angle check' )
+		or diag("angle=$angle, now=$now");
 
     my $next = $d;
 
