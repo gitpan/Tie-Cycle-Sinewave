@@ -1,10 +1,14 @@
 Revision history for Perl extension Tie::Cycle::Sinewave
 
+0.04 2006-11-03 13:11:01 UTC
+    - Clarified licensing information in META.yml. No other functional
+      changes.
+
 0.03 2006-07-25 14:13:26 UTC 
     - Fixed up a silly error in the synopsis example code.
     - Refined the code to deal with 2*PI wraparound (only shows up on
       64-bit platforms. Not sure if this fix is sufficient).
-	- The README talked about Build.PL instead of Makefile.PL.
+    - The README talked about Build.PL instead of Makefile.PL.
 
 0.02 2005-10-02 15:16:29 UTC
     - Couldn't get Build.PL to play nicely under smoke tests (the dreaded

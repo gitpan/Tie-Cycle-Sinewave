@@ -8,14 +8,14 @@ Tie::Cycle::Sinewave - Cycle through a series of values on a sinewave
 
 =head1 VERSION
 
-This document describes version 0.03 of Tie::Cycle::Sinewave,
-released 2006-07-25.
+This document describes version 0.04 of Tie::Cycle::Sinewave, released
+2006-11-03.
 
 =cut
 
 use vars '$VERSION';
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 =head1 SYNOPSIS
 

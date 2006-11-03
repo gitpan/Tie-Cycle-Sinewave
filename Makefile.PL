@@ -1,6 +1,6 @@
 # generate Makefile for building Tie::Cycle::Sinewave
 #
-# Copyright (C) 2005 David Landgren
+# Copyright (C) 2005-2006 David Landgren
 
 use strict;
 use ExtUtils::MakeMaker;
@@ -14,9 +14,9 @@ else {
 }
 
 WriteMakefile(
-    NAME         => 'Tie::Cycle::Sinewave',
-    VERSION_FROM => 'Sinewave.pm',
-    PREREQ_PM    => {
-        'Test::More' => 0,
-	},
+    NAME          => 'Tie::Cycle::Sinewave',
+    VERSION_FROM  => 'Sinewave.pm',
+    ABSTRACT_FROM => 'Sinewave.pm',
+    AUTHOR        => 'David Landgren',
+    LICENSE       => 'perl',
 );
