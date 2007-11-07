@@ -8,14 +8,14 @@ Tie::Cycle::Sinewave - Cycle through a series of values on a sinewave
 
 =head1 VERSION
 
-This document describes version 0.04 of Tie::Cycle::Sinewave, released
-2006-11-03.
+This document describes version 0.05 of Tie::Cycle::Sinewave, released
+2007-11-07.
 
 =cut
 
 use vars '$VERSION';
 
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -280,7 +280,7 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Cycle-Sinewave>.
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2005-2006 David Landgren, All Rights Reserved.
+Copyright 2005-2007 David Landgren, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

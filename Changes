@@ -1,5 +1,10 @@
 Revision history for Perl extension Tie::Cycle::Sinewave
 
+0.05 2007-11-07 21:31:52 UTC
+    - New-style POD testing infrastructure used.
+    - META.yml should conform to current spec. No code changes,
+      current users do not need to upgrade.
+
 0.04 2006-11-03 13:11:01 UTC
     - Clarified licensing information in META.yml. No other functional
       changes.

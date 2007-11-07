@@ -1,4 +1,4 @@
-This file is the README for Tie::Cycle::Sinewave version 0.04
+This file is the README for Tie::Cycle::Sinewave version 0.05
 
 INSTALLATION
 
@@ -26,7 +26,7 @@ at http://search.cpan.org/~DLAND/
 STATUS
 
 This module is under active development. The test suite achieves 100%
-coverage, according to Devel::Cover.
+coverage according to Devel::Cover.
 
 BUGS
 
@@ -36,7 +36,7 @@ http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Cycle-Sinewave
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2005-2006 David Landgren. All rights reserved.
+Copyright (C) 2005-2007 David Landgren. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
